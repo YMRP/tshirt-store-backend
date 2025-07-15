@@ -4,7 +4,7 @@ export const corsConfig: CorsOptions = {
     //origin: quien esta tratando de conectarse
     //callback: 
     origin: function(origin, callback) {
-        if(origin === 'http://localhost:5173'){
+        if(origin === process.env.FRONTEND_URL){
             //null: ningun error
             //true: permitir conexion
             callback(null,true)
